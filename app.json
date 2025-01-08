@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "react-native-pokedex",
+    "slug": "react-native-pokedex",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ]
+  }
+}
