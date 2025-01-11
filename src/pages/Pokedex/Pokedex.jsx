@@ -1,7 +1,7 @@
 import { View, StatusBar, FlatList } from 'react-native';
 import styled from 'styled-components/native';
 import Header from '../../components/PokedexHeader/PokedexHeader';
-import PokemonItemlist from '../../components/PokemonItemList/PokemonItemList';
+import PokemonCard from '../../components/PokemonCard/PokemonCard';
 
 const NUM_COLUMNS = 2;
 
@@ -23,7 +23,7 @@ const Pokedex = () => {
           renderItem={({ item }) =>
             item ? (
               <PokemonItemWrapper>
-                <PokemonItemlist title={item} />
+                <PokemonCard title={item} />
               </PokemonItemWrapper>
             ) : (
               <PokemonItemWrapper />
