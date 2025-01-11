@@ -9,6 +9,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
+    "@types/styled-components-react-native": "^5.2.5",
+    "expo-image": "^2.0.4",
     "react-native-vector-icons": "^10.2.0",
     "styled-components": "^6.1.14"
   },
