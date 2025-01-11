@@ -1,10 +1,10 @@
-import { View, Text} from "react-native";
-import Header from "./src/components/Header/Header";
+import { View } from "react-native";
+import Pokedex from "./src/pages/Pokedex/Pokedex";
 
 export default function App() {
   return (
     <View >
-      <Header />
+      <Pokedex />
     </View>
   );
 }
