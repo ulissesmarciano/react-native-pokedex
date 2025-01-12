@@ -2,3 +2,4 @@
 
 -- styled components
 -- react native vetor icon
+-- axios
