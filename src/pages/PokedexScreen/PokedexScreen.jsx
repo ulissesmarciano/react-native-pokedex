@@ -8,7 +8,7 @@ const NUM_COLUMNS = 2;
 
 const data = Array.from({ length: 13 }, (_, i) => `Item ${i + 1}`);
 
-const Pokedex = () => {
+const PokedexScreen = () => {
   const { pokemons, loading, error } = useFetchAllPokemons();
   console.log(pokemons);
 
@@ -61,4 +61,4 @@ const PokemonItemWrapper = styled(View)`
   max-width: 50%;
 `;
 
-export default Pokedex;
+export default PokedexScreen;
