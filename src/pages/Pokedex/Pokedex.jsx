@@ -1,4 +1,5 @@
 import { View, StatusBar, FlatList } from 'react-native';
+import useFetchAllPokemons from '../../hooks/useFecthAllPokemons';
 import styled from 'styled-components/native';
 import Header from '../../components/PokedexHeader/PokedexHeader';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
@@ -8,6 +9,9 @@ const NUM_COLUMNS = 2;
 const data = Array.from({ length: 13 }, (_, i) => `Item ${i + 1}`);
 
 const Pokedex = () => {
+  const { pokemons, loading, error } = useFetchAllPokemons();
+  console.log(pokemons);
+
   const formattedData = [...data];
   while (formattedData.length % NUM_COLUMNS !== 0) {
     formattedData.push(null);
