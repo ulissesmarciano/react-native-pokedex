@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-const Type = () => {
+const Type = ({name}) => {
   return (
     <Container>
-      <TypeName>electric</TypeName>
+      <TypeName>{name}</TypeName>
     </Container>
   );
 };
