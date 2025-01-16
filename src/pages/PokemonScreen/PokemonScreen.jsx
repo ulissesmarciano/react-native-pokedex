@@ -1,6 +1,6 @@
 import { View, Button, StyleSheet } from 'react-native';
 
-const PokemonScreen = () => {
+const PokemonScreen = ({ navigation }) => {
   return (
     <View>
       <Button
@@ -12,14 +12,14 @@ const PokemonScreen = () => {
 };
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-    },
-    text: {
-      fontSize: 24,
-    },
-  });
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 24,
+  },
+});
 
 export default PokemonScreen;
