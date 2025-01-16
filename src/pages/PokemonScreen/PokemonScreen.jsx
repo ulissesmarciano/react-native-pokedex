@@ -1,6 +1,10 @@
 import { View, Button, StyleSheet } from 'react-native';
+import useFetchPokemonData from '../../hooks/useFetchPokemonData';
 
-const PokemonScreen = ({ navigation }) => {
+const PokemonScreen = ({ navigation, route }) => {
+  const { name } = route.params;
+  const pokemonData = useFetchPokemonData(name)
+
   return (
     <View>
       <Button

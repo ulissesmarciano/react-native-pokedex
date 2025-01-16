@@ -59,7 +59,7 @@ const PokedexScreen = ({ navigation }) => {
                     cardBackground={pokemon?.types?.[0].type.name}
                     id={formatId(pokemon.id)}
                     avatar={pokemon?.sprites?.versions?.['generation-v']?.['black-white'].animated?.front_default}
-                    onPress={() => navigation.navigate('Pokemon')}
+                    onPress={() => navigation.navigate('Pokemon', { name: pokemon.name })}
                     type={pokemon?.types.map((type, index) => (
                       <Type
                         name={type?.type?.name}
