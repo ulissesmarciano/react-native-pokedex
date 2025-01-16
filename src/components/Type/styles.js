@@ -5,7 +5,7 @@ export const Container = styled.View`
     padding: 2px 8px;
     align-items: center;
     justify-content: center;
-    background-color: ${({ typeBackground }) => pokemonTypeStyles[typeBackground] || 'green'};
+    background-color: ${({ typeBackground }) => pokemonTypeStyles[typeBackground] || 'rgba(255, 255, 255, 0.25)'};
     border-radius: 10px;
 `
 
