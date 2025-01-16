@@ -10,7 +10,7 @@ export const Container = styled.View`
 `
 
 export const TypeName = styled.Text`
-    color: #333;
+    color: #fff;
     text-transform: capitalize;
     font-weight: 600;
 `
