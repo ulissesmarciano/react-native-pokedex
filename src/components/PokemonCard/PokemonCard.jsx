@@ -1,20 +1,18 @@
 import React from 'react';
-import { ItemContainer, PokemonAvatar, PokemonName, PokemonTypeImageContainer, TypesContainer } from './styles'
-import Type from '../Type/Type';
+import { ItemContainer, PokemonAvatar, PokemonName, PokemonId, NameIdContainer, PokemonTypeImageContainer, TypesContainer } from './styles'
 
-
-const Avatar = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif";
-
-const PokemonCard = () => {
+const PokemonCard = ({ onPress, name, type, avatar, id, cardBackground }) => {
   return (
-    <ItemContainer>
-      <PokemonName>pikachuuuuuuuu</PokemonName>
+    <ItemContainer onPress={onPress} cardBackground={cardBackground}>
+      <NameIdContainer>
+        <PokemonName>{name}</PokemonName>
+        <PokemonId>{id}</PokemonId>
+      </NameIdContainer>
       <PokemonTypeImageContainer>
         <TypesContainer>
-          <Type />
-          <Type />
+          {type}
         </TypesContainer>
-        <PokemonAvatar source={{ uri: Avatar }} />
+        <PokemonAvatar source={{ uri: avatar }} />
       </PokemonTypeImageContainer>
     </ItemContainer>
   );
