@@ -1,18 +1,18 @@
-import { View, StatusBar, FlatList } from 'react-native';
+import { StatusBar, FlatList } from 'react-native';
 import useFetchAllPokemons from '../../hooks/useFecthAllPokemons';
 import styled from 'styled-components/native';
+
 import Header from '../../components/PokedexHeader/PokedexHeader';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
+import Type from '../../components/Type/Type';
 
-const NUM_COLUMNS = 2;
 
-const data = Array.from({ length: 13 }, (_, i) => `Item ${i + 1}`);
-
-const PokedexScreen = () => {
+const PokedexScreen = ({ navigation }) => {
   const { pokemons, loading, error } = useFetchAllPokemons();
-  console.log(pokemons);
+  const NUM_COLUMNS = 2;
 
-  const formattedData = [...data];
+  const formatId = (id) => `#${id.toString().padStart(3, "0")}`;
+  const formattedData = [...pokemons];
   while (formattedData.length % NUM_COLUMNS !== 0) {
     formattedData.push(null);
   }
@@ -23,30 +23,42 @@ const PokedexScreen = () => {
       <Header />
       <PokedexListContainer>
         <FlatList
-          data={formattedData}
-          renderItem={({ item }) =>
-            item ? (
+          data={pokemons}
+          numColumns={NUM_COLUMNS}
+          keyExtractor={(item) => item.id.toString()}
+          renderItem={({ item: pokemon }) =>
+            pokemon ? (
               <PokemonItemWrapper>
-                <PokemonCard title={item} />
+                <PokemonCard
+                  name={pokemon?.name}
+                  cardBackground={pokemon?.types?.[0].type.name}
+                  id={formatId(pokemon.id)}
+                  avatar={pokemon?.sprites?.versions?.['generation-v']?.['black-white'].animated?.front_default}
+                  onPress={() => navigation.navigate('Pokemon')}
+                  type={pokemon?.types.map((type, index) => (
+                    <Type
+                      name={type?.type?.name}
+                      key={index}
+                    />
+                  ))}
+                />
               </PokemonItemWrapper>
             ) : (
               <PokemonItemWrapper />
             )
           }
-          numColumns={NUM_COLUMNS}
-          keyExtractor={(item, index) => index.toString()}
         />
       </PokedexListContainer>
     </Body>
   );
 };
 
-const Body = styled(View)`
+const Body = styled.View`
   background-color: #FF010B;
   height: 100%;
 `;
 
-const PokedexListContainer = styled(View)`
+const PokedexListContainer = styled.View`
   margin: 14px;
   flex: 1;
   background-color: #363636;
@@ -55,7 +67,7 @@ const PokedexListContainer = styled(View)`
   border-radius: 10px;
 `;
 
-const PokemonItemWrapper = styled(View)`
+const PokemonItemWrapper = styled.View`
   flex: 1;
   margin: 6px;
   max-width: 50%;
