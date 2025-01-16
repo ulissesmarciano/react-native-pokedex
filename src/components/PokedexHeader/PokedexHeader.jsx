@@ -4,7 +4,7 @@ import { BottomSearchBarSection, Container, Logo, LogoSection, Point, SearchBarS
 import ThreeDotsButton from '../ThreeDotsButton/ThreeDotsButton';
 import SearchInput from '../SearchInput/SearchInput';
 
-const Header = () => {
+const Header = ({ onChangeText, value }) => {
     return (
         <Container>
             <LogoSection>
@@ -14,7 +14,10 @@ const Header = () => {
             </LogoSection>
             <SearchSection>
                 <SearchBarSection>
-                    <SearchInput />
+                    <SearchInput
+                        onChangeText={onChangeText}
+                        value={value}
+                    />
                     <ThreeDotsButton />
                 </SearchBarSection>
                 <BottomSearchBarSection />
