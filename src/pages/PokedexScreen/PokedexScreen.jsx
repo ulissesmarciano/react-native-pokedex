@@ -1,6 +1,6 @@
 import { StatusBar, FlatList } from 'react-native';
+import { Container, PokedexListContainer, PokemonItemWrapper } from './styles';
 import useFetchAllPokemons from '../../hooks/useFecthAllPokemons';
-import styled from 'styled-components/native';
 
 import Header from '../../components/PokedexHeader/PokedexHeader';
 import PokemonCard from '../../components/PokemonCard/PokemonCard';
@@ -18,7 +18,7 @@ const PokedexScreen = ({ navigation }) => {
   }
 
   return (
-    <Body>
+    <Container>
       <StatusBar barStyle="light-content" backgroundColor="#A40003" />
       <Header />
       <PokedexListContainer>
@@ -49,28 +49,8 @@ const PokedexScreen = ({ navigation }) => {
           }
         />
       </PokedexListContainer>
-    </Body>
+    </Container>
   );
 };
-
-const Body = styled.View`
-  background-color: #FF010B;
-  height: 100%;
-`;
-
-const PokedexListContainer = styled.View`
-  margin: 14px;
-  flex: 1;
-  background-color: #363636;
-  border-width: 1px;
-  border-color: #000;
-  border-radius: 10px;
-`;
-
-const PokemonItemWrapper = styled.View`
-  flex: 1;
-  margin: 6px;
-  max-width: 50%;
-`;
 
 export default PokedexScreen;
