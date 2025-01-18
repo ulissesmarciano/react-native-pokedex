@@ -1,8 +1,8 @@
 import { TypeName, Container } from "./styles";
 
-const Type = ({ name, typeBackground }) => {
+const Type = ({ name, typeBackground, variant }) => {
   return (
-    <Container typeBackground={typeBackground}>
+    <Container typeBackground={typeBackground} variant={variant}>
       <TypeName>{name}</TypeName>
     </Container>
   );
