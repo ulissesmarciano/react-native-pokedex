@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Dot, Line, LineSection } from "./styles";
+import { Container, Dot, Line } from "./styles";
 
 const FilterButton = ({ onPress }) => {
   return (
