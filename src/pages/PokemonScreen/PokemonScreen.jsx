@@ -1,11 +1,26 @@
 import { StatusBar } from "react-native";
-import {Container, Avatar, AvatarContainer, FirstInfoContainer, Id, PokemonName, ProgressBarContainer, SecondInfoContainer, SizeDataContainer, SizeName, SizeValue, StatsTitle, TypesContainer, ValueContainer} from "./styles";
+import {
+  Container,
+  Avatar,
+  AvatarContainer,
+  FirstInfoContainer,
+  Id,
+  PokemonName,
+  ProgressBarContainer,
+  SecondInfoContainer,
+  SizeDataContainer,
+  SizeName,
+  SizeValue,
+  StatsTitle,
+  TypesContainer,
+  ValueContainer,
+} from "./styles";
 import useFetchPokemonData from "../../hooks/useFetchPokemonData";
 import {
   calculateHeight,
   calculateWeight,
   formatId,
-  calculateAverageBaseStats
+  calculateAverageBaseStats,
 } from "../../utils/pokemonUtils";
 
 import Type from "../../components/Type/Type";
@@ -82,7 +97,9 @@ const PokemonScreen = ({ route }) => {
           <ProgressBar
             title="exp"
             progressBGColor={"#388D3C"}
-            progress={calculateAverageBaseStats(pokemonData?.stats.map((baseStat) => baseStat?.base_stat))}
+            progress={calculateAverageBaseStats(
+              pokemonData?.stats.map((baseStat) => baseStat?.base_stat)
+            )}
             limit={"1000"}
             variant="secondary"
           />
@@ -91,7 +108,5 @@ const PokemonScreen = ({ route }) => {
     </Container>
   );
 };
-
-
 
 export default PokemonScreen;

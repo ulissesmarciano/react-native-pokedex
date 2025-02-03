@@ -18,7 +18,11 @@ export default function App() {
         <Stack.Screen
           name="Pokemon"
           component={PokemonScreen}
-          options={{ title: "Pokédex", headerTransparent: true, headerTintColor: "#fff" }}
+          options={{
+            title: "Pokédex",
+            headerTransparent: true,
+            headerTintColor: "#fff",
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

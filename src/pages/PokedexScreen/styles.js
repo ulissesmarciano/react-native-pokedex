@@ -1,7 +1,7 @@
-import styled from 'styled-components/native';
+import styled from "styled-components/native";
 
 export const Container = styled.View`
-  background-color: #FF010B;
+  background-color: #ff010b;
   height: 100%;
 `;
 

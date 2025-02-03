@@ -1,55 +1,37 @@
 export const pokemonTypeStyles = {
-    normal: '#a6a877',
-    
+  normal: "#a6a877",
 
-    grass: '#77c850',
-    
+  grass: "#77c850",
 
-    fire: '#ee7f30',
-    
+  fire: "#ee7f30",
 
-    water: '#678fee',
-    
+  water: "#678fee",
 
-    electric: '#f7cf2e',
-    
+  electric: "#f7cf2e",
 
-    ice: '#98d5d7',
-    
+  ice: "#98d5d7",
 
-    ground: '#dfbf69',
-    
+  ground: "#dfbf69",
 
-    flying: '#a98ff0',
-    
+  flying: "#a98ff0",
 
-    poison: '#a040a0',
-    
+  poison: "#a040a0",
 
-    fighting: '#bf3029',
-    
+  fighting: "#bf3029",
 
-    psychic: '#f65687',
-    
+  psychic: "#f65687",
 
-    dark: '#725847',
-    
+  dark: "#725847",
 
-    rock: '#b8a137',
-    
+  rock: "#b8a137",
 
-    bug: '#a8b720',
-    
+  bug: "#a8b720",
 
-    ghost: '#6e5896',
-    
-    
-    steel: '#b9b7cf',
-    
+  ghost: "#6e5896",
 
-    dragon: '#6f38f6',
-    
+  steel: "#b9b7cf",
 
-    fairy: '#f9aec7',
-    
+  dragon: "#6f38f6",
+
+  fairy: "#f9aec7",
 };

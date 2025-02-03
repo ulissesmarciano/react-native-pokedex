@@ -1,5 +1,11 @@
 import React from "react";
-import {Container, Progress, ProgressBarSpace, ProgressData, ProgressTitle } from "./styles"
+import {
+  Container,
+  Progress,
+  ProgressBarSpace,
+  ProgressData,
+  ProgressTitle,
+} from "./styles";
 
 const ProgressBar = ({ progress, title, progressBGColor, limit, variant }) => {
   return (

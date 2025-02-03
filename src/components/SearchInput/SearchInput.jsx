@@ -1,5 +1,5 @@
-import Icon from 'react-native-vector-icons/MaterialIcons';
-import { Container, Input } from './styles';
+import Icon from "react-native-vector-icons/MaterialIcons";
+import { Container, Input } from "./styles";
 
 const SearchInput = ({ onChangeText, value }) => {
   return (

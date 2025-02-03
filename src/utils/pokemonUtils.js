@@ -11,7 +11,7 @@ export const calculateWeight = (weightInKg) => {
 export const formatId = (id) => `#${id?.toString().padStart(3, "0")}`;
 
 export const calculateAverageBaseStats = (baseStat) => {
-  const sumOfbaseStats = baseStat?.reduce((acc, num) => acc + num, 0)
+  const sumOfbaseStats = baseStat?.reduce((acc, num) => acc + num, 0);
   console.log(sumOfbaseStats);
-  return sumOfbaseStats; 
-}
+  return sumOfbaseStats;
+};

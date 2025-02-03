@@ -1,5 +1,13 @@
-import React from 'react';
-import { ItemContainer, PokemonAvatar, PokemonName, PokemonId, NameIdContainer, PokemonTypeImageContainer, TypesContainer } from './styles'
+import React from "react";
+import {
+  ItemContainer,
+  PokemonAvatar,
+  PokemonName,
+  PokemonId,
+  NameIdContainer,
+  PokemonTypeImageContainer,
+  TypesContainer,
+} from "./styles";
 
 const PokemonCard = ({ onPress, name, type, avatar, id, cardBackground }) => {
   return (
@@ -9,9 +17,7 @@ const PokemonCard = ({ onPress, name, type, avatar, id, cardBackground }) => {
         <PokemonId>{id}</PokemonId>
       </NameIdContainer>
       <PokemonTypeImageContainer>
-        <TypesContainer>
-          {type}
-        </TypesContainer>
+        <TypesContainer>{type}</TypesContainer>
         <PokemonAvatar source={{ uri: avatar }} />
       </PokemonTypeImageContainer>
     </ItemContainer>
