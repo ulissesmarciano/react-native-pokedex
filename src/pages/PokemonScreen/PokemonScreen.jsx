@@ -1,5 +1,5 @@
-import { Image, StatusBar } from "react-native";
-import styled from "styled-components/native";
+import { StatusBar } from "react-native";
+import {Container, Avatar, AvatarContainer, FirstInfoContainer, Id, PokemonName, ProgressBarContainer, SecondInfoContainer, SizeDataContainer, SizeName, SizeValue, StatsTitle, TypesContainer, ValueContainer} from "./styles";
 import useFetchPokemonData from "../../hooks/useFetchPokemonData";
 import {
   calculateHeight,
@@ -10,7 +10,6 @@ import {
 
 import Type from "../../components/Type/Type";
 import ProgressBar from "../../components/ProgressBar/Progressbar";
-import { pokemonTypeStyles } from "../../constants/colors";
 
 const PokemonScreen = ({ route }) => {
   const { name } = route.params;
@@ -93,89 +92,6 @@ const PokemonScreen = ({ route }) => {
   );
 };
 
-const Container = styled.View`
-  background-color: #2b292c;
-  flex: 1;
-`;
-const AvatarContainer = styled.View`
-  position: relative;
-  padding-top: 60px;
-  padding-bottom: 5px;
-  background-color: ${({ pokemonBGColor }) =>
-    pokemonTypeStyles[pokemonBGColor]};
-  flex: 2;
-  align-items: center;
-  justify-content: center;
-  border-radius: 0 0 50px 50px;
-`;
 
-const Avatar = styled(Image)`
-  height: 200px;
-  width: 200px;
-`;
-
-const Id = styled.Text`
-  position: absolute;
-  top: 50px;
-  right: 22px;
-  color: #fff;
-  font-size: 20px;
-  font-weight: 600;
-`;
-
-const FirstInfoContainer = styled.View`
-  padding: 20px 0;
-  align-items: center;
-`;
-
-const PokemonName = styled.Text`
-  margin-bottom: 10px;
-  color: #fff;
-  font-weight: 700;
-  font-size: 32px;
-  text-transform: capitalize;
-`;
-
-const TypesContainer = styled.View`
-  margin-bottom: 20px;
-  flex-direction: row;
-  gap: 20px;
-`;
-
-const SizeDataContainer = styled.View`
-  flex-direction: row;
-  gap: 60px;
-`;
-const ValueContainer = styled.View`
-  gap: 10px;
-  align-items: center;
-`;
-
-const SizeValue = styled.Text`
-  color: #fff;
-  font-size: 22px;
-  font-weight: 600;
-`;
-
-const SizeName = styled.Text`
-  color: #dbdbdb;
-  font-weight: 200;
-`;
-
-const SecondInfoContainer = styled.View`
-  flex: 2;
-  gap: 20px;
-`;
-
-const StatsTitle = styled.Text`
-  align-self: center;
-  color: #fff;
-  font-size: 24px;
-`;
-
-const ProgressBarContainer = styled.View`
-  padding: 0 16px;
-  gap: 10px;
-`;
 
 export default PokemonScreen;
