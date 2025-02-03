@@ -9,7 +9,7 @@ import {
   SearchSection,
 } from "./styles";
 
-import ThreeDotsButton from "../ThreeDotsButton/ThreeDotsButton";
+import FilterButton from "../FilterButton/FilterButton";
 import SearchInput from "../SearchInput/SearchInput";
 
 const Header = ({ onChangeText, value }) => {
@@ -23,7 +23,7 @@ const Header = ({ onChangeText, value }) => {
       <SearchSection>
         <SearchBarSection>
           <SearchInput onChangeText={onChangeText} value={value} />
-          <ThreeDotsButton />
+          <FilterButton />
         </SearchBarSection>
         <BottomSearchBarSection />
       </SearchSection>

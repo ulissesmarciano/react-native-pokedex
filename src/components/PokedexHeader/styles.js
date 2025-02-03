@@ -42,7 +42,7 @@ export const SearchSection = styled.View`
 export const SearchBarSection = styled.View`
   padding-right: 14px;
   flex: 3;
-  gap: 30px;
+  gap: 10px;
   flex-direction: row;
   align-items: center;
 `;
